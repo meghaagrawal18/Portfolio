@@ -16,11 +16,13 @@ const ContactCard = ({ icon, title, value, link }) => {
           color: inherit;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           display: block;
+          border: 1px solid transparent;
         }
 
         .contact-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 30px rgba(251, 191, 36, 0.2);
+        
+         border-color: #fbbf24; 
         }
 
         .contact-icon {
