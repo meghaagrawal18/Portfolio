@@ -7,9 +7,9 @@ import About from "./sections/About"
 import Projects from "./sections/Projects"
 import Skills from "./sections/Skills"
 import Contact from "./sections/Contact"
-
-import SectionIndicator from "./components/SectionIndicator" // Import the new component
+import SectionIndicator from "./components/SectionIndicator"
 import VoiceQnAModal from "./components/VoiceQnAModal"
+import { ThemeProvider } from "./contexts/ThemeContext"
 import "./index.css"
 
 function App() {
@@ -27,17 +27,18 @@ function App() {
   }, [isVoiceModalOpen])
 
   return (
-    <div className="App">
-      <Navbar />
-      <Home onOpenVoiceModal={() => setIsVoiceModalOpen(true)} />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-    
-      <SectionIndicator /> {/* Add the SectionIndicator here */}
-      {isVoiceModalOpen && <VoiceQnAModal onClose={() => setIsVoiceModalOpen(false)} />}
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Navbar />
+        <Home onOpenVoiceModal={() => setIsVoiceModalOpen(true)} />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <SectionIndicator />
+        {isVoiceModalOpen && <VoiceQnAModal onClose={() => setIsVoiceModalOpen(false)} />}
+      </div>
+    </ThemeProvider>
   )
 }
 

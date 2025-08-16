@@ -20,10 +20,10 @@ const ProjectCard = ({ project, onViewDetails }) => {
   return (
     <Card
       sx={{
-        backgroundColor: "#1a1a1a", // Matches --bg-secondary
+        backgroundColor: "var(--card-bg-color)", // Matches --bg-secondary
         borderRadius: "16px",
         padding: "1rem", // Adjusted padding for CardContent
-        border: "1px solid #333", // Matches --border-color
+        border: "1px solid var(--card-border-color)", // Matches --border-color
         transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease", // Added border-color to transition
         cursor: "pointer",
         height: "100%",
@@ -40,6 +40,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
+           
           height: "100%",
           padding: "1rem", // Inner padding for content
           "&:last-child": {
@@ -51,7 +52,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
           variant="h6"
           component="h3"
           sx={{
-            color: "#ffffff", // Matches --text-primary
+            color: "var(--text-primary)" , // Matches --text-primary
             fontWeight: 600,
             marginBottom: "1rem",
           }}
@@ -61,7 +62,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
         <Typography
           variant="body2"
           sx={{
-            color: "#cccccc", // Matches --text-secondary
+            color:"var(--text-primary)", // Matches --text-secondary
             marginBottom: "2rem",
             lineHeight: 1.6,
             flexGrow: 1,

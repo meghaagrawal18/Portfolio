@@ -22,8 +22,8 @@ const Projects = () => {
     <section id="projects" className="section">
       <div className="container">
         <div className="projects-header">
-          <h2 className="section-title">Projects</h2>
-          <p className="section-subtitle">A showcase of my technical skills and creative solutions</p>
+          <h2 className="section-title"  style={{ color: "var(--text-primary)" }}>Projects</h2>
+          <p className="section-subtitle"  style={{ color: "var(--text-primary)" }}>A showcase of my technical skills and creative solutions</p>
         </div>
         <div className="projects-grid">
           {projects.map((project, index) => (

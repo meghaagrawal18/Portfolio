@@ -10,6 +10,7 @@
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 2rem;
           margin-bottom: 4rem;
+          color: --text-primary;
         }
 
         .contact-action-area {
@@ -41,8 +42,8 @@
           align-items: start;
         }
 
-        .who-am-i-section {
-          background-color: #1a1a1a;
+        .-i-section {
+          background-color: #501919;
           border-radius: 12px;
           padding: 2rem;
           border: 1px solid #333;
@@ -106,19 +107,7 @@
           display: contents;
         }
 
-        .tab-section {
-          background-color: #1a1a1a;
-          border-radius: 12px;
-          padding: 2rem;
-          border: 1px solid #333;
-        }
-
-        .tab-section h4 {
-          color: #fbbf24;
-          font-size: 1.3rem;
-          margin: 0;
-        }
-
+       
         .section-description {
           color: #999;
           margin-bottom: 1.5rem;
@@ -195,6 +184,7 @@
           .tab-section,
           .who-am-i-section {
             padding: 1.5rem;
+            
           }
         }
         .who-am-i-section,

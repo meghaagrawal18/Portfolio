@@ -6,11 +6,11 @@ const Skills = () => {
   return (
     <section id="skills" className="section">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title"  style={{ color: "var(--text-primary)" }}>Skills</h2>
+        <p className="section-subtitle" style={{ color: "var(--text-primary)" }} >
           Technologies and tools I use to bring ideas to life
         </p>
-        <div className="skills-grid grid grid-3">
+        <div className="skills-grid grid grid-3" >
           {skillCategories.map((category, index) => (
             <SkillCard key={index} category={category} />
           ))}

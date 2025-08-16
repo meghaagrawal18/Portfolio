@@ -45,17 +45,24 @@ const Contact = () => {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <h2 className="section-title">Contact</h2>
-        <p className="section-subtitle">Let's build something great together through any of these channels</p>
+        <h2 className="section-title"  style={{ color: "var(--text-primary)" }}>Contact</h2>
+        <p className="section-subtitle"  style={{ color: "var(--text-primary)" }}>Let's build something great together through any of these channels</p>
 
-        <div className="contact-methods">
-          {contactMethods.map((method, index) => (
-            <ContactCard key={index} {...method} />
-          ))}
-        </div>
+          
+        <div 
+  className="contact-methods" 
+  style={{ color: "var(--text-primary)" }}
+>
+  {contactMethods.map((method, index) => (
+    <ContactCard key={index} {...method} />
+  ))}
+</div>
+
 
         <div className="contact-action-area">
           <Button
+          
+            style={{ color: "var(--text-primary)" }}
                 type="button"
                 className="btn btn-outline-warning btn-lg"
             onClick={() => setIsFormModalOpen(true)} // Open modal on click

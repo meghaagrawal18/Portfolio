@@ -17,21 +17,22 @@ const SkillCard = ({ category }) => {
           <span key={index} className="skill-item">{skill}</span>
         ))}
       </div>
+
+      {/* ✅ Only one <style jsx> */}
       <style jsx>{`
-          .skill-card {
-          background-color: #1a1a1a;
+        .skill-card {
+          background-color: var(--card-bg);
           border-radius: 12px;
           padding: 1.5rem;
-          border: 1px solid transparent;
+          border: 1px solid var(--card-border);
           transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+          color: var(--card-text);
         }
 
         .skill-card:hover {
           transform: translateY(-5px);
-         
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        
-         border-color: #fbbf24; 
+          border-color: #fbbf24; 
         }
 
         .skill-header {
@@ -54,7 +55,7 @@ const SkillCard = ({ category }) => {
         }
 
         .skill-header h3 {
-          color: #ffffff;
+          color: var(--card-text);
           font-size: 1.2rem;
         }
 
@@ -65,8 +66,8 @@ const SkillCard = ({ category }) => {
         }
 
         .skill-item {
-          background-color: #2a2a2a;
-          color: #cccccc;
+          background-color: var(--skill-item-bg);
+          color: var(--skill-item-text);
           padding: 0.5rem 1rem;
           border-radius: 20px;
           font-size: 0.9rem;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
+import "../index.css" // Assuming you have a CSS file for Home styles
 
 const Home = ({onOpenVoiceModal}) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -22,9 +23,9 @@ const Home = ({onOpenVoiceModal}) => {
               <img src="src\assets\1744121979556.jpeg" alt="Profile" />
             </div>
             <h1 className="name">Megha Agrawal</h1>
-            <p className="title">
+            <p className="title"  style={{ color: "var(--text-primary)" }}>
               I'm a{" "}
-              <span className="dynamic-word">{words[currentWordIndex]}</span>
+              <span className="dynamic-word"  style={{ color: "var(--text-primary)" }}>{words[currentWordIndex]}</span>
             </p>
             <p className="description">
               Get ready to turn your ideas into digital reality. I'm a
@@ -34,6 +35,7 @@ const Home = ({onOpenVoiceModal}) => {
 
             <div className="cta-buttons">
               <button
+              style={{ color: "var(--text-primary)" }}
                 type="button"
                 className="btn btn-outline-warning btn-lg"
                 href="/resume.pdf"
@@ -43,6 +45,7 @@ const Home = ({onOpenVoiceModal}) => {
 
              <button
                 type="button"
+                style={{ color: "var(--text-primary)" }}
                 className="btn btn-outline-warning btn-lg" // Use btn-secondary to match previous styling
                 onClick={(e) => {
                   e.preventDefault() // Prevent default navigation
@@ -60,6 +63,7 @@ const Home = ({onOpenVoiceModal}) => {
 
             <div className="social-links">
               <a
+              style={{ color: "var(--text-primary)" }}
                 href="https://github.com/meghaagrawal18"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,6 +78,7 @@ const Home = ({onOpenVoiceModal}) => {
                 </svg>
               </a>
               <a
+              style={{ color: "var(--text-primary)" }}
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,6 +93,7 @@ const Home = ({onOpenVoiceModal}) => {
                 </svg>
               </a>
               <a
+              style={{ color: "var(--text-primary)" }}
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -108,7 +114,7 @@ const Home = ({onOpenVoiceModal}) => {
 
       <style jsx>{`
         .home-section {
-          background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+          background: --background-home;
           min-height: 100vh;
         }
 
@@ -137,7 +143,7 @@ const Home = ({onOpenVoiceModal}) => {
           font-size: 3rem;
           font-weight: 700;
           margin-bottom: 0.5rem;
-          color: #ffffff;
+          color: --text-primary;
         }
 
         .title {
@@ -148,7 +154,7 @@ const Home = ({onOpenVoiceModal}) => {
 
         .description {
           font-size: 1.1rem;
-          color: #cccccc;
+          color: --text-secondary;
           margin-bottom: 3rem;
           line-height: 1.8;
         }
